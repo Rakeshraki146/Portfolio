@@ -197,28 +197,28 @@ export const portfolioData = {
       title: "C++",
       issuer: "Infosys Springboard",
       date: "August 2025",
-      certificateUrl: "https://www.linkedin.com/in/b-rakesh-060044322/details/certifications/"
+      certificateUrl: "https://lnkd.in/p/dQqGJKgJ"
     },
     {
       id: "cert-2",
       title: "Artificial Intelligence Essentials",
       issuer: "Certification Program",
       date: "September 2026",
-      certificateUrl: "https://www.linkedin.com/in/b-rakesh-060044322/details/certifications/"
+      certificateUrl: "/int428.codeup_compressed.pdf"
     },
     {
       id: "cert-3",
       title: "React.js",
       issuer: "Tech Veda",
       date: "March 2025",
-      certificateUrl: "https://www.linkedin.com/in/b-rakesh-060044322/details/certifications/"
+      certificateUrl: "https://lnkd.in/p/d2MHibrR"
     },
     {
       id: "cert-4",
       title: "Data Management System",
       issuer: "Infosys Springboard",
       date: "August 2026",
-      certificateUrl: "https://www.linkedin.com/in/b-rakesh-060044322/details/certifications/"
+      certificateUrl: "https://drive.google.com/file/d/1Lk6em6nnEuyoUNDAYdnlMyaOq-q3f9rI/view?usp=drive_link"
     }
   ] as CertificateItem[],
 
@@ -242,15 +242,23 @@ export const portfolioData = {
       grade: "98%",
       gradeType: "Percentage",
       details: "Completed higher secondary education in Physics, Chemistry, and Mathematics with exceptional academic distinction."
+    },
+    {
+      degree: "Secondary School Certificate (SSC)",
+      field: "General Curriculum",
+      institution: "State Board of Secondary Education",
+      location: "Telangana",
+      date: "Completed",
+      grade: "100%",
+      gradeType: "Percentage",
+      details: "Achieved a perfect 100% score in Secondary School Certificate (SSC) examinations."
     }
   ] as EducationItem[],
 
-  // Displayed strictly without assumptions per prompt instructions:
-  // "Also display: Percentage: 100% (Do not assume what the 100% value refers to if the resume does not specify it.)"
   additionalAcademicHighlight: {
     metric: "100%",
-    label: "Percentage: 100%",
-    note: "Official Academic Record Highlight"
+    label: "SSC: 100%",
+    note: "Secondary School Certificate (SSC) Academic Distinction"
   },
 
   resume: {

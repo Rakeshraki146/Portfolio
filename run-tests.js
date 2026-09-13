@@ -38,7 +38,7 @@ assert(dataContent.includes('Lovely Professional University'), 'Education: Lovel
 assert(dataContent.includes('6.32'), 'CGPA: 6.32 present');
 assert(dataContent.includes('Prathibha Junior College'), 'Intermediate: Prathibha Junior College present');
 assert(dataContent.includes('98%'), 'Intermediate Percentage: 98% present');
-assert(dataContent.includes('100%'), 'Additional academic percentage 100% present without assumptions');
+assert(dataContent.includes('SSC: 100%'), 'Updated score: "SSC: 100%" present');
 
 // Check Training
 assert(dataContent.includes('Basics of Data Structures and Algorithms'), 'Training: Basics of Data Structures and Algorithms present');
@@ -47,10 +47,10 @@ assert(dataContent.includes('July 2026'), 'Training Date: July 2026 present');
 assert(dataContent.includes('A Grade'), 'Training Achievement: "A Grade" present');
 
 // Check Certifications
-assert(dataContent.includes('Infosys Springboard') && dataContent.includes('C++'), 'Certificate: C++ (Infosys Springboard) present');
-assert(dataContent.includes('Artificial Intelligence Essentials'), 'Certificate: AI Essentials present');
-assert(dataContent.includes('Tech Veda') && dataContent.includes('React.js'), 'Certificate: React.js (Tech Veda) present');
-assert(dataContent.includes('Data Management System'), 'Certificate: Data Management System present');
+assert(dataContent.includes('https://lnkd.in/p/dQqGJKgJ'), 'Certificate C++ URL: https://lnkd.in/p/dQqGJKgJ present');
+assert(dataContent.includes('int428.codeup_compressed.pdf'), 'Certificate AI Essentials PDF present');
+assert(dataContent.includes('https://lnkd.in/p/d2MHibrR'), 'Certificate React.js URL: https://lnkd.in/p/d2MHibrR present');
+assert(dataContent.includes('1Lk6em6nnEuyoUNDAYdnlMyaOq-q3f9rI'), 'Certificate DBMS Drive link present');
 
 // Check Projects
 assert(dataContent.includes('Indian AI Property Marketplace'), 'Project 1: Indian AI Property Marketplace present');
@@ -62,7 +62,7 @@ assert(dataContent.includes('November 2025'), 'Project 2 Date: November 2025 pre
 assert(dataContent.includes("Banker's Algorithm"), "Project 2: Banker's Algorithm present");
 assert(dataContent.includes('Resource Allocation Graph'), 'Project 2: Resource Allocation Graph (RAG) present');
 
-// Check Strict Skills Constraint (No extra invented tech like Docker, Kubernetes, AWS, Angular, Vue, etc.)
+// Check Strict Skills Constraint
 const forbiddenSkills = ['Docker', 'Kubernetes', 'AWS', 'Angular', 'Vue', 'Django', 'Flask', 'Spring Boot', 'GraphQL', 'PHP', 'Ruby', 'MongoDB'];
 forbiddenSkills.forEach(forbidden => {
   assert(!dataContent.includes(`"${forbidden}"`), `Strict Compliance: Forbidden unlisted tech "${forbidden}" is NOT included`);
@@ -75,6 +75,8 @@ const profileStat = fs.statSync('public/profile.jpg');
 assert(profileStat.size > 50000, `Profile photo is a valid high-res image (size: ${(profileStat.size/1024).toFixed(1)} KB)`);
 
 assert(fs.existsSync('public/favicon.svg'), 'Favicon public/favicon.svg exists');
+assert(fs.existsSync('public/int428.codeup_compressed.pdf'), 'AI Certificate PDF exists in public directory');
+assert(fs.existsSync('dist/int428.codeup_compressed.pdf'), 'AI Certificate PDF exists in dist bundle');
 assert(fs.existsSync('index.html'), 'index.html exists');
 
 // 3. Check Components and Navigation Anchors
