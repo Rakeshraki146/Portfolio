@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, Github, ExternalLink, Calendar, Cpu, Layers, Database, Cloud, BookOpen, AlertCircle, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { X, Github, Calendar, Cpu, Layers, Database, Cloud, BookOpen, AlertCircle, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { ProjectItem } from '../data/portfolioData';
 
 interface ProjectModalProps {
@@ -61,7 +61,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             {project.description}
           </p>
 
-          {/* Action Links */}
+          {/* Action Links (Live Demo removed as requested) */}
           <div className="flex flex-wrap items-center gap-3 mt-4">
             <a
               href={project.githubUrl}
@@ -72,18 +72,6 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               <Github className="w-4 h-4 text-cyan-400" />
               <span>View GitHub</span>
             </a>
-
-            {project.liveDemoUrl && (
-              <a
-                href={project.liveDemoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 font-bold text-xs shadow-md transition-all"
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>Live Demo</span>
-              </a>
-            )}
           </div>
         </div>
 

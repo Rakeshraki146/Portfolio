@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, ExternalLink, Sparkles, Calendar, ArrowRight, Layers, Cpu, Eye } from 'lucide-react';
+import { Github, Sparkles, Calendar, ArrowRight, Layers, Cpu, Eye } from 'lucide-react';
 import { portfolioData, ProjectItem } from '../data/portfolioData';
 import { ProjectModal } from './ProjectModal';
 
@@ -120,7 +120,7 @@ export const Projects: React.FC = () => {
                 </div>
               </div>
 
-              {/* Action Buttons */}
+              {/* Action Buttons: View Details and View GitHub (Live Demo removed as requested) */}
               <div className="mt-6 pt-4 border-t border-slate-800/80 flex flex-wrap items-center gap-3">
                 <button
                   onClick={() => setSelectedProject(project)}
@@ -139,18 +139,6 @@ export const Projects: React.FC = () => {
                   <Github className="w-4 h-4 text-slate-400" />
                   <span>View GitHub</span>
                 </a>
-
-                {project.liveDemoUrl && (
-                  <a
-                    href={project.liveDemoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 text-xs font-bold shadow-md transition-all ml-auto"
-                  >
-                    <ExternalLink className="w-3.5 h-3.5" />
-                    <span>Live Demo</span>
-                  </a>
-                )}
               </div>
             </div>
           ))}

@@ -139,7 +139,7 @@ export const portfolioData = {
       },
       deployment: "Deployed on Streamlit Community Cloud.",
       githubUrl: "https://github.com/Rakeshraki146/indian-ai-property-marketplace",
-      liveDemoUrl: "#", // Replace with your live Streamlit URL if deployed
+      liveDemoUrl: undefined,
       overview: "An owner-direct real-estate marketplace engineered with Python and Streamlit to connect buyers and sellers directly without intermediaries. Integrates an intelligent machine learning valuation pipeline to calculate accurate property price estimates based on real market parameters.",
       problemStatement: "Traditional real estate portals create unnecessary friction through intermediaries, broker commissions, and untransparent price tags, leaving both buyers and sellers with unfair pricing and fragmented communication.",
       solution: "Engineered a streamlined, role-based direct platform combining an interactive Streamlit UI, secure MySQL/TiDB Cloud persistence, and a predictive Extra Trees Regressor model to deliver instant valuation estimates.",
@@ -245,6 +245,8 @@ export const portfolioData = {
     }
   ] as EducationItem[],
 
+  // Displayed strictly without assumptions per prompt instructions:
+  // "Also display: Percentage: 100% (Do not assume what the 100% value refers to if the resume does not specify it.)"
   additionalAcademicHighlight: {
     metric: "100%",
     label: "Percentage: 100%",
