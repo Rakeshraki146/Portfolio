@@ -204,7 +204,7 @@ export const portfolioData = {
       title: "Artificial Intelligence Essentials",
       issuer: "Certification Program",
       date: "September 2026",
-      certificateUrl: "/int428.codeup_compressed.pdf"
+      certificateUrl: "https://drive.google.com/file/d/1YuAY2rJMUcjTHuTxUtdUax9LqB2qKN5t/view?usp=drive_lin"
     },
     {
       id: "cert-3",
