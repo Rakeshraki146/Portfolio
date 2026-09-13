@@ -1,9 +1,9 @@
 import React from 'react';
-import { GraduationCap, Calendar, MapPin, Award, Sparkles, Star } from 'lucide-react';
+import { GraduationCap, Calendar, MapPin, Award, Sparkles } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export const Education: React.FC = () => {
-  const { education, additionalAcademicHighlight } = portfolioData;
+  const { education } = portfolioData;
 
   return (
     <section id="education" className="py-24 relative overflow-hidden bg-slate-950/40 border-y border-slate-800/60">
@@ -28,7 +28,7 @@ export const Education: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           
           {/* Main Education Entries */}
-          {education.map((item, idx) => (
+          {education.map((item) => (
             <div
               key={item.degree}
               className="relative p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-slate-800/90 hover:border-cyan-500/40 transition-all duration-300 shadow-xl hover:shadow-cyan-500/10"
@@ -83,29 +83,6 @@ export const Education: React.FC = () => {
               )}
             </div>
           ))}
-
-          {/* Prompt Rule: "Also display: Percentage: 100% (Do not assume what the 100% value refers to if the resume does not specify it.)" */}
-          <div className="relative p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-cyan-950/30 via-slate-900/90 to-emerald-950/30 border border-cyan-500/30 shadow-lg">
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-cyan-500/20 text-cyan-300">
-                  <Star className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-xs font-mono uppercase tracking-wider text-slate-400">
-                    Academic Record Score
-                  </div>
-                  <div className="text-base sm:text-lg font-bold text-white font-display">
-                    {additionalAcademicHighlight.label}
-                  </div>
-                </div>
-              </div>
-
-              <div className="px-5 py-2 rounded-2xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-950 font-mono font-black text-lg sm:text-xl shadow-md">
-                {additionalAcademicHighlight.metric}
-              </div>
-            </div>
-          </div>
 
         </div>
 

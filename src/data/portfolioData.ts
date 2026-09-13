@@ -246,7 +246,7 @@ export const portfolioData = {
     {
       degree: "Secondary School Certificate (SSC)",
       field: "General Curriculum",
-      institution: "State Board of Secondary Education",
+      institution: "Panchavati Vidyalaya",
       location: "Telangana",
       date: "Completed",
       grade: "100%",
@@ -254,12 +254,6 @@ export const portfolioData = {
       details: "Achieved a perfect 100% score in Secondary School Certificate (SSC) examinations."
     }
   ] as EducationItem[],
-
-  additionalAcademicHighlight: {
-    metric: "100%",
-    label: "SSC: 100%",
-    note: "Secondary School Certificate (SSC) Academic Distinction"
-  },
 
   resume: {
     heading: "Want to know more about my skills and projects?",

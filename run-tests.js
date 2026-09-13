@@ -38,7 +38,8 @@ assert(dataContent.includes('Lovely Professional University'), 'Education: Lovel
 assert(dataContent.includes('6.32'), 'CGPA: 6.32 present');
 assert(dataContent.includes('Prathibha Junior College'), 'Intermediate: Prathibha Junior College present');
 assert(dataContent.includes('98%'), 'Intermediate Percentage: 98% present');
-assert(dataContent.includes('SSC: 100%'), 'Updated score: "SSC: 100%" present');
+assert(dataContent.includes('Panchavati Vidyalaya'), 'School: "Panchavati Vidyalaya" present');
+assert(dataContent.includes('100%'), 'SSC Percentage 100% present');
 
 // Check Training
 assert(dataContent.includes('Basics of Data Structures and Algorithms'), 'Training: Basics of Data Structures and Algorithms present');
@@ -75,11 +76,14 @@ const profileStat = fs.statSync('public/profile.jpg');
 assert(profileStat.size > 50000, `Profile photo is a valid high-res image (size: ${(profileStat.size/1024).toFixed(1)} KB)`);
 
 assert(fs.existsSync('public/favicon.svg'), 'Favicon public/favicon.svg exists');
+assert(fs.existsSync('public/B_Rakesh_Resume.pdf'), 'Updated Resume PDF exists in public folder');
+const resumeStat = fs.statSync('public/B_Rakesh_Resume.pdf');
+assert(resumeStat.size > 10000, `Resume PDF is valid size: ${(resumeStat.size/1024).toFixed(1)} KB`);
 assert(fs.existsSync('public/int428.codeup_compressed.pdf'), 'AI Certificate PDF exists in public directory');
 assert(fs.existsSync('dist/int428.codeup_compressed.pdf'), 'AI Certificate PDF exists in dist bundle');
 assert(fs.existsSync('index.html'), 'index.html exists');
 
-// 3. Check Components and Navigation Anchors
+// 3. Check Components and Navigation Structure
 console.log('\n--- Suite 3: Components & Navigation Structure ---');
 const requiredComponents = [
   'NeuralBackground.tsx',
@@ -109,10 +113,11 @@ expectedSections.forEach(sec => {
   assert(appContent.includes(`'${sec}'`), `Navigation spy tracks section: #${sec}`);
 });
 
-// 4. Check Production Build Output
+// 4. Check Production Distribution Bundle
 console.log('\n--- Suite 4: Production Distribution Bundle ---');
 assert(fs.existsSync('dist/index.html'), 'dist/index.html generated');
 assert(fs.existsSync('dist/profile.jpg'), 'dist/profile.jpg bundled');
+assert(fs.existsSync('dist/B_Rakesh_Resume.pdf'), 'dist/B_Rakesh_Resume.pdf bundled');
 assert(fs.existsSync('dist/favicon.svg'), 'dist/favicon.svg bundled');
 
 const distAssets = fs.existsSync('dist/assets') ? fs.readdirSync('dist/assets') : [];
