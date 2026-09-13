@@ -58,7 +58,7 @@ export const portfolioData = {
     gitHub: "https://github.com/Rakeshraki146",
     gitHubUsername: "Rakeshraki146",
     resumeUrl: "/B_Rakesh_Resume.pdf",
-    profilePhoto: "/profile.jpg",
+    profilePhoto: "./profile.jpg",
   },
 
   about: {
